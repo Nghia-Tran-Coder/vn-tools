@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Các công cụ nhỏ, miễn phí, dùng ngay trên trình duyệt: đọc số thành chữ và nhiều tiện ích khác.",
   // Sẽ bật dòng dưới khi có mã từ Google Search Console:
-  // verification: { google: "MA_XAC_MINH" },
+  verification: { google: "2c2el8xMT1Yv3WBcU0f-nDNiAkbctzZEQKtkuYCdOgI" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
