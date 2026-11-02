@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SITE_NAME, SITE_URL } from "../lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Công cụ tiện ích tiếng Việt",
-  description: "Các công cụ nhỏ, miễn phí, dùng ngay trên trình duyệt: đọc số thành chữ và nhiều tiện ích khác.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} - Công cụ tiện ích tiếng Việt`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description:
+    "Các công cụ nhỏ, miễn phí, dùng ngay trên trình duyệt: đọc số thành chữ và nhiều tiện ích khác.",
+  // Sẽ bật dòng dưới khi có mã từ Google Search Console:
+  // verification: { google: "MA_XAC_MINH" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,12 +1,5 @@
 import Link from "next/link";
-
-const TOOLS = [
-  {
-    href: "/doc-so-thanh-chu",
-    ten: "Đọc số thành chữ",
-    moTa: "Đổi số tiền sang chữ tiếng Việt để ghi vào hóa đơn, hợp đồng, phiếu thu chi.",
-  },
-];
+import { TOOLS } from "../lib/tools";
 
 export default function Home() {
   return (
