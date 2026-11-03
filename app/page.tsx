@@ -15,8 +15,8 @@ export default function Home() {
               href={t.href}
               className="block rounded-xl border p-4 shadow-sm hover:bg-gray-50"
             >
-              <span className="text-lg font-semibold">{t.ten}</span>
-              <span className="mt-1 block text-sm text-gray-600">{t.moTa}</span>
+              <h2 className="text-lg font-semibold">{t.ten}</h2>
+              <p className="mt-1 text-sm text-gray-600">{t.moTa}</p>
             </Link>
           </li>
         ))}
