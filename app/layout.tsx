@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { SITE_NAME, SITE_URL } from "../lib/site";
+import { CLOUDFLARE_TOKEN, SITE_NAME, SITE_URL } from "../lib/site";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Script from "next/script";
@@ -39,11 +39,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         {children}
         <Footer />
-        <Script
-          src="DIA_CHI_SCRIPT_CUA_NHA_CUNG_CAP"
-          data-website-id="MA_WEBSITE_CUA_BAN"
-          strategy="afterInteractive"
-        />
+        {CLOUDFLARE_TOKEN && process.env.NODE_ENV === "production" && (
+          <Script
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: CLOUDFLARE_TOKEN })}
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );

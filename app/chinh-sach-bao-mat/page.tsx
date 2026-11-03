@@ -36,12 +36,14 @@ export default function Page() {
           bạn.
         </p>
 
-        <h2 className="text-xl font-semibold">3. Cookie</h2>
+        <h2 className="text-xl font-semibold">3. Cookie và thống kê truy cập</h2>
         <p>
-          Website sử dụng dịch vụ thống kê truy cập TÊN_DỊCH_VỤ để biết số lượt xem, trang được xem, nguồn
-          truy cập, loại thiết bị và quốc gia ở dạng tổng hợp. Nhà cung cấp mô tả dịch vụ này không dùng
-          cookie. Website không chủ động đặt cookie để theo dõi hoặc quảng cáo. Chúng tôi không dùng dữ liệu
-          này để nhận dạng cá nhân bạn.
+          Website sử dụng dịch vụ Cloudflare Web Analytics để biết số lượt xem, trang được xem, nguồn truy
+          cập, loại thiết bị và quốc gia ở dạng tổng hợp. Theo mô tả của nhà cung cấp, dịch vụ này không dùng
+          cookie để theo dõi người truy cập. Vì nhà cung cấp là công ty nước ngoài nên dữ liệu có thể được xử
+          lý bên ngoài Việt Nam. Chúng tôi không dùng dữ liệu này để nhận dạng cá nhân bạn. Ngoài ra, website
+          không chủ động đặt cookie để theo dõi hoặc quảng cáo. Nếu sau này website sử dụng quảng cáo, chính
+          sách này sẽ được cập nhật và nêu rõ loại cookie được dùng.
         </p>
 
         <h2 className="text-xl font-semibold">4. Thống kê tìm kiếm</h2>
