@@ -11,4 +11,9 @@ export const TOOLS: Tool[] = [
     ten: "Tính lợi nhuận & giá bán hàng online",
     moTa: "Tính giá bán cần đặt hoặc lợi nhuận còn lại sau phí sàn Shopee, TikTok Shop, Lazada.",
   },
+  {
+    href: "/tinh-roas-hoa-von",
+    ten: "Tính ROAS hòa vốn & chi phí quảng cáo",
+    moTa: "Biết ROAS cần đạt, ACOS và chi phí quảng cáo tối đa để chạy quảng cáo không bị lỗ.",
+  },
 ];

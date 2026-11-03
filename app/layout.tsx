@@ -4,6 +4,7 @@ import "./globals.css";
 import { SITE_NAME, SITE_URL } from "../lib/site";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         {children}
         <Footer />
+        <Script
+          src="DIA_CHI_SCRIPT_CUA_NHA_CUNG_CAP"
+          data-website-id="MA_WEBSITE_CUA_BAN"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

@@ -38,9 +38,10 @@ export default function Page() {
 
         <h2 className="text-xl font-semibold">3. Cookie</h2>
         <p>
-          Website hiện không chủ động đặt cookie để theo dõi hoặc quảng cáo. Nếu sau này website sử dụng
-          quảng cáo hoặc công cụ phân tích, chính sách này sẽ được cập nhật và nêu rõ loại cookie được
-          dùng.
+          Website sử dụng dịch vụ thống kê truy cập TÊN_DỊCH_VỤ để biết số lượt xem, trang được xem, nguồn
+          truy cập, loại thiết bị và quốc gia ở dạng tổng hợp. Nhà cung cấp mô tả dịch vụ này không dùng
+          cookie. Website không chủ động đặt cookie để theo dõi hoặc quảng cáo. Chúng tôi không dùng dữ liệu
+          này để nhận dạng cá nhân bạn.
         </p>
 
         <h2 className="text-xl font-semibold">4. Thống kê tìm kiếm</h2>
