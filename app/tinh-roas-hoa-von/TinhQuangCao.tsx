@@ -9,6 +9,7 @@ const THONG_BAO_LOI: Record<string, string> = {
   PHI_TU_100: "Tổng phần trăm phí phải nhỏ hơn 100%.",
   GIA_BAN_KHONG_HOP_LE: "Giá bán phải lớn hơn 0.",
   SO_KHONG_HOP_LE: "Vui lòng nhập số không âm (chi tiêu quảng cáo phải lớn hơn 0).",
+  TY_LE_HOAN_KHONG_HOP_LE: "Tỷ lệ đơn hoàn phải từ 0% đến dưới 100%.",
 };
 
 function Dong({ ten, giaTri }: { ten: string; giaTri: string }) {
@@ -29,9 +30,11 @@ export default function TinhQuangCao() {
   const [loiMucTieu, setLoiMucTieu] = useState("");
   const [chiTieuQC, setChiTieuQC] = useState("");
   const [doanhThuQC, setDoanhThuQC] = useState("");
+  const [tyLeHoan, setTyLeHoan] = useState("");
 
   const gb = docTien(giaBan);
   const mucTieu = docTien(loiMucTieu);
+  const hoan = docPhanTram(tyLeHoan);
   const dauVao = {
     giaNhap: docTien(giaNhap),
     chiPhiMoiDon: docTien(chiPhiDon),
@@ -48,17 +51,17 @@ export default function TinhQuangCao() {
   let loi = "";
 
   if (coDuLieu) {
-    const cacSo = [gb, mucTieu, dauVao.giaNhap, dauVao.chiPhiMoiDon, dauVao.phiPhanTram];
+    const cacSo = [gb, mucTieu, hoan, dauVao.giaNhap, dauVao.chiPhiMoiDon, dauVao.phiPhanTram];
     if (cacSo.some((x) => Number.isNaN(x))) {
       loi = "Vui lòng chỉ nhập chữ số (ô phần trăm có thể dùng dấu phẩy, ví dụ 23,5).";
     } else {
       try {
-        hoaVon = tinhQuangCao(gb, dauVao, mucTieu);
+        hoaVon = tinhQuangCao(gb, dauVao, mucTieu, hoan);
         if (cheDo === "thucTe") {
           const ct = docTien(chiTieuQC);
           const dt = docTien(doanhThuQC);
           if (Number.isNaN(ct) || Number.isNaN(dt)) throw new Error("SO_KHONG_HOP_LE");
-          thucTe = tinhLaiThucTe(gb, dauVao, ct, dt);
+          thucTe = tinhLaiThucTe(gb, dauVao, ct, dt, hoan);
         }
       } catch (e) {
         const ma = e instanceof Error ? e.message : "";
@@ -95,6 +98,15 @@ export default function TinhQuangCao() {
             goiY="Cộng phí cố định, giao dịch, dịch vụ, thuế..."
             giaTri={phiTong}
             onChange={setPhiTong}
+            donVi="%"
+            kieu="decimal"
+          />
+          <Truong
+            id="ty-le-hoan"
+            nhan="Tỷ lệ đơn hoàn / hủy (không bắt buộc)"
+            goiY="Ví dụ 10 nghĩa là 10% đơn đặt bị hoàn hoặc hủy. Để trống nếu chưa biết."
+            giaTri={tyLeHoan}
+            onChange={setTyLeHoan}
             donVi="%"
             kieu="decimal"
           />

@@ -24,6 +24,7 @@ const THONG_BAO_LOI: Record<string, string> = {
   PHI_TU_100: "Tổng phần trăm phí phải nhỏ hơn 100%.",
   PHI_VA_LAI_TU_100: "Tổng phí và lãi mong muốn (theo %) phải nhỏ hơn 100%. Nếu bạn muốn nhập số tiền, hãy chọn “Lãi theo số tiền”.",
   SO_KHONG_HOP_LE: "Vui lòng nhập số không âm.",
+  TY_LE_HOAN_KHONG_HOP_LE: "Tỷ lệ đơn hoàn phải từ 0% đến dưới 100%.",
 };
 
 type TruongProps = {

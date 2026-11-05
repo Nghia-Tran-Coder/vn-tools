@@ -24,4 +24,17 @@ assert.equal(c.loiSauQC, -400000);
 assert.throws(() => tinhQuangCao(0, d));
 assert.throws(() => tinhLaiThucTe(200000, d, 0, 1000000));
 
+// Có 10% đơn hoàn: lãi mỗi đơn đặt còn 41.400 đ, ROAS hòa vốn khoảng 4,83
+const e = tinhQuangCao(200000, d, 0, 10);
+assert.equal(Math.round(e.loiTruocQC), 41400);
+assert.equal(Math.round((e.roasHoaVon as number) * 100) / 100, 4.83);
+
+// ROAS thực tế 5 với 10% hoàn: 125 đơn x 41.400 - 5.000.000 = 175.000
+const g = tinhLaiThucTe(200000, d, 5000000, 25000000, 10);
+assert.equal(g.loiSauQC, 175000);
+
+// Tỷ lệ hoàn không hợp lệ phải báo lỗi
+assert.throws(() => tinhQuangCao(200000, d, 0, 100));
+assert.throws(() => tinhQuangCao(200000, d, 0, -5));
+
 console.log("OK: tất cả test đều đúng");

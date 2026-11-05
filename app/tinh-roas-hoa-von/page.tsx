@@ -85,10 +85,22 @@ export default function Page() {
           .
         </p>
 
+        <h2 className="text-xl font-semibold">Đơn hoàn và đơn hủy ảnh hưởng thế nào?</h2>
+        <p>
+          Tùy cách tính của từng sàn, doanh thu trong báo cáo quảng cáo có thể được tính trên đơn đặt, trong
+          khi bạn chỉ có lãi trên đơn giao thành công. Nếu 10% đơn bị hoàn hoặc hủy, lãi bình quân trên mỗi
+          đơn đặt giảm đi 10%, nên ROAS hòa vốn tăng lên. Với ví dụ ở trên, ROAS hòa vốn tăng từ khoảng 4,35
+          lên khoảng 4,83. Hãy nhập tỷ lệ hoàn hoặc hủy của bạn vào công cụ để tính sát thực tế hơn.
+        </p>
+
         <h2 className="text-xl font-semibold">Giới hạn của công cụ</h2>
         <ul className="list-disc space-y-2 pl-5">
           <li>Công cụ coi mọi đơn từ quảng cáo có cùng mức lãi mỗi đơn.</li>
-          <li>Không tính đơn hoàn, hủy hoặc đổi trả. Nếu tỷ lệ này cao, ROAS hòa vốn thực tế sẽ cao hơn.</li>
+          <li>
+            Đơn hoàn và hủy được tính qua ô tỷ lệ hoàn, với giả định chúng không tạo doanh thu và không phát
+            sinh thêm chi phí. Nếu bạn mất thêm phí vận chuyển hoặc hàng hỏng khi hoàn hàng, hãy cộng ước tính
+            khoản đó vào chi phí cố định mỗi đơn.
+          </li>
           <li>
             Mỗi nền tảng có thể tính doanh thu quảng cáo theo cách riêng (ví dụ có hoặc không tính giảm
             giá, phí vận chuyển). Hãy xem định nghĩa trong báo cáo quảng cáo của sàn.
