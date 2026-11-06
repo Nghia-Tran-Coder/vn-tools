@@ -13,3 +13,6 @@ export const TRANG_THONG_TIN = [
 export const NAM_BAN_QUYEN = 2026;
 
 export const CLOUDFLARE_TOKEN = "0f11ba991b8344ac9352b41d84a058d3";
+
+// Dán đường dẫn Google Form góp ý vào đây. Để trống thì khung góp ý sẽ không hiện.
+export const GOP_Y_URL = "https://forms.gle/5fNXNDQyV2ax1XvC8";

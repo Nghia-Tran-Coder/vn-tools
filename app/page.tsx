@@ -8,6 +8,14 @@ export default function Home() {
       <p className="mt-2 text-gray-600">
         Các công cụ nhỏ, miễn phí, chạy ngay trên trình duyệt.
       </p>
+
+      <Link
+        href="/tinh-loi-nhuan-ban-hang"
+        className="mt-6 inline-flex min-h-11 items-center rounded-lg bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700"
+      >
+        Tính lợi nhuận bán hàng ngay →
+      </Link>
+      
       <ul className="mt-8 space-y-3">
         {TOOLS.map((t) => (
           <li key={t.href}>

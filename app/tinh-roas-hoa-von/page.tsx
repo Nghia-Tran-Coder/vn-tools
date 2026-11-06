@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Bang from "../../components/Bang";
 import TinhQuangCao from "./TinhQuangCao";
+import GopY from "../../components/GopY";
 
 export const metadata: Metadata = {
   title: "Tính ROAS hòa vốn, ACOS và chi phí quảng cáo tối đa",
@@ -130,6 +131,7 @@ export default function Page() {
         <h3 className="font-semibold">Số liệu tôi nhập có bị gửi đi đâu không?</h3>
         <p>Không. Việc tính toán diễn ra ngay trên trình duyệt của bạn.</p>
       </article>
+      <GopY tenCongCu="tính ROAS hòa vốn" />
     </main>
   );
 }

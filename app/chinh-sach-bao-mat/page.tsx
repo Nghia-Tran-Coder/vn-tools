@@ -64,6 +64,9 @@ export default function Page() {
           thương mại điện tử). Các trang đó có chính sách riêng và chúng tôi không chịu trách nhiệm về nội
           dung hay cách họ xử lý dữ liệu.
         </p>
+        <p>
+          Biểu mẫu góp ý do Google Forms cung cấp. Thông tin bạn điền được gửi đến Google và chủ biểu mẫu, vì vậy xin đừng nhập thông tin cá nhân nhạy cảm.
+        </p>
 
         <h2 className="text-xl font-semibold">7. Thay đổi chính sách</h2>
         <p>

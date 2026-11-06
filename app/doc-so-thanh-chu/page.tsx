@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import DocSo from "./DocSo";
+import GopY from "../../components/GopY";
 
 export const metadata: Metadata = {
   title: "Đọc số thành chữ online - Chuyển số tiền sang chữ tiếng Việt",
@@ -93,6 +94,7 @@ export default function Page() {
           riêng, bạn nên đối chiếu với kế toán hoặc văn bản hiện hành trước khi dùng.
         </p>
       </section>
+      <GopY tenCongCu="đọc số thành chữ" />
     </main>
   );
 }

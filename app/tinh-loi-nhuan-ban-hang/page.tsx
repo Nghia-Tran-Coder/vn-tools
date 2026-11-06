@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import TinhLoiNhuan from "./TinhLoiNhuan";
+import GopY from "../../components/GopY";
 
 export const metadata: Metadata = {
   title: "Tính lợi nhuận & giá bán Shopee, TikTok Shop, Lazada",
@@ -182,6 +183,7 @@ export default function Page() {
           quảng cáo trừ khi bạn tự cộng vào chi phí mỗi đơn.
         </p>
       </article>
+      <GopY tenCongCu="tính lợi nhuận" />
     </main>
   );
 }
